@@ -432,6 +432,150 @@ class FormHandler {
     }
 }
 
+// ===== Honor Cards Controller =====
+class HonorCardsController {
+    constructor() {
+        this.cards = document.querySelectorAll('.honor-card');
+        this.modal = document.getElementById('cardModal');
+        this.modalImage = document.getElementById('cardModalImage');
+        this.modalClose = document.getElementById('cardModalClose');
+        this.isModalOpen = false;
+        
+        this.init();
+    }
+    
+    init() {
+        this.bindEvents();
+        this.setupKeyboardNavigation();
+    }
+    
+    bindEvents() {
+        // 卡片点击事件
+        this.cards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.openModal(card);
+            });
+            
+            // 键盘支持
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.openModal(card);
+                }
+            });
+            
+            // 设置可访问性属性
+            card.setAttribute('tabindex', '0');
+            card.setAttribute('role', 'button');
+            card.setAttribute('aria-label', `查看${card.querySelector('.card-title')?.textContent || ''}荣誉证书`);
+        });
+        
+        // 模态框关闭事件
+        this.modalClose.addEventListener('click', () => this.closeModal());
+        
+        // 点击遮罩层关闭
+        this.modal.addEventListener('click', (e) => {
+            if (e.target === this.modal) {
+                this.closeModal();
+            }
+        });
+        
+        // ESC键关闭
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && this.isModalOpen) {
+                this.closeModal();
+            }
+        });
+        
+        // 窗口大小变化时调整模态框
+        window.addEventListener('resize', () => this.handleResize());
+    }
+    
+    setupKeyboardNavigation() {
+        // 卡片间的键盘导航
+        this.cards.forEach((card, index) => {
+            card.addEventListener('keydown', (e) => {
+                let nextIndex = index;
+                
+                switch(e.key) {
+                    case 'ArrowRight':
+                    case 'ArrowDown':
+                        nextIndex = (index + 1) % this.cards.length;
+                        e.preventDefault();
+                        break;
+                    case 'ArrowLeft':
+                    case 'ArrowUp':
+                        nextIndex = (index - 1 + this.cards.length) % this.cards.length;
+                        e.preventDefault();
+                        break;
+                    default:
+                        return;
+                }
+                
+                this.cards[nextIndex].focus();
+            });
+        });
+    }
+    
+    openModal(card) {
+        const img = card.querySelector('.card-image');
+        const title = card.querySelector('.card-title')?.textContent || '';
+        
+        if (!img) return;
+        
+        // 设置模态框图片
+        this.modalImage.src = img.src;
+        this.modalImage.alt = img.alt;
+        
+        // 显示模态框
+        this.modal.classList.add('active');
+        this.isModalOpen = true;
+        
+        // 禁用页面滚动
+        document.body.style.overflow = 'hidden';
+        
+        // 焦点管理
+        setTimeout(() => {
+            this.modalClose.focus();
+        }, 100);
+        
+        // 调整图片大小
+        this.handleResize();
+        
+        // 触发动画
+        requestAnimationFrame(() => {
+            this.modalImage.style.transform = 'scale(1)';
+        });
+    }
+    
+    closeModal() {
+        this.modal.classList.remove('active');
+        this.isModalOpen = false;
+        
+        // 恢复页面滚动
+        document.body.style.overflow = '';
+        
+        // 重置图片
+        setTimeout(() => {
+            this.modalImage.src = '';
+            this.modalImage.alt = '';
+        }, 300);
+    }
+    
+    // 响应式适配
+    handleResize() {
+        if (this.isModalOpen && this.modalImage) {
+            // 动态调整图片大小以适应屏幕
+            const maxHeight = window.innerHeight * 0.85;
+            const maxWidth = window.innerWidth * 0.9;
+            
+            this.modalImage.style.maxHeight = `${maxHeight}px`;
+            this.modalImage.style.maxWidth = `${maxWidth}px`;
+        }
+    }
+}
+
 // ===== Scroll Progress Indicator =====
 class ScrollProgressIndicator {
     constructor() {
@@ -635,6 +779,7 @@ class App {
             this.components.push(new NavigationHandler());
             this.components.push(new AnimationController());
             this.components.push(new FormHandler());
+            this.components.push(new HonorCardsController());
             this.components.push(new ScrollProgressIndicator());
             this.components.push(new PerformanceOptimizer());
             this.components.push(new AccessibilityEnhancer());
