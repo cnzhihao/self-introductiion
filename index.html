@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>徐智昊 - AI产品专家 | 字节跳动TRAE产品经理候选人</title>
+    <meta name="description" content="资深AI产品专家，5年产品管理经验，2年AI Agent开发实践，专注AI原生开发范式创新">
+    <meta name="keywords" content="AI产品经理,AI编程,产品管理,字节跳动,TRAE,AI Agent,MCP">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Particle Background -->
+    <canvas id="particles-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">徐智昊</span>
+                <span class="logo-subtitle">AI Product Expert</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#about" class="nav-link">关于我</a></li>
+                <li><a href="#experience" class="nav-link">专业经历</a></li>
+                <li><a href="#projects" class="nav-link">AI项目</a></li>
+                <li><a href="#skills" class="nav-link">技能矩阵</a></li>
+                <li><a href="#contact" class="nav-link">联系方式</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="typewriter">徐智昊 - AI产品专家</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        <span class="highlight">5年产品管理</span> × <span class="highlight">2年AI Agent开发</span>
+                    </p>
+                    <p class="hero-description">
+                        致力于通过创新的交互设计，打造极致高效的AI辅助开发体验
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="90">0</span>
+                            <span class="stat-unit">%</span>
+                            <span class="stat-label">使用率提升</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="300">0</span>
+                            <span class="stat-unit">+</span>
+                            <span class="stat-label">学员影响力</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="5">0</span>
+                            <span class="stat-unit">大</span>
+                            <span class="stat-label">系统集成</span>
+                        </div>
+                    </div>
+                    <a href="#projects" class="cta-button">
+                        <span>探索我的AI产品世界</span>
+                        <svg class="cta-arrow" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="hero-visual">
+                    <div class="ai-workflow">
+                        <div class="workflow-node" data-delay="0">
+                            <span>用户需求</span>
+                        </div>
+                        <div class="workflow-arrow"></div>
+                        <div class="workflow-node" data-delay="200">
+                            <span>AI分析</span>
+                        </div>
+                        <div class="workflow-arrow"></div>
+                        <div class="workflow-node" data-delay="400">
+                            <span>产品创新</span>
+                        </div>
+                        <div class="workflow-arrow"></div>
+                        <div class="workflow-node" data-delay="600">
+                            <span>用户价值</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="avatar-container">
+                        <div class="avatar-placeholder">
+                            <span class="avatar-text">徐智昊</span>
+                        </div>
+                        <div class="avatar-glow"></div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">关于我</h2>
+                    <p class="about-description">
+                        资深产品专家，拥有超过<span class="highlight">5年企业级SaaS与信息化产品管理经验</span>，及<span class="highlight">2年AI Agent与AI Coding工具开发实践</span>。具备从0到1产品孵化、跨系统平台整合、产品团队管理的综合能力。
+                    </p>
+                    <p class="about-description">
+                        曾主导集团数字化转型，打通5大核心业务系统；独立负责SaaS产品线，将核心功能使用率从30%提升至90%，实现百万级商业营收。
+                    </p>
+                    <p class="about-description">
+                        当前专注于<span class="highlight">AI原生开发范式</span>，作为独立开发者，设计并研发了三款AI Agent增强工具，经个人实践验证，能将特定开发任务效率提升高达90%。
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🎯</div>
+                            <div class="highlight-content">
+                                <h4>产品战略</h4>
+                                <p>从0到1产品孵化，百万级商业营收</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🤖</div>
+                            <div class="highlight-content">
+                                <h4>AI创新</h4>
+                                <p>3款AI Agent工具，90%效率提升</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">👥</div>
+                            <div class="highlight-content">
+                                <h4>团队领导</h4>
+                                <p>管理17人团队，数字化转型专家</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">专业经历</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-period">2023.03 - 至今</div>
+                        <h3 class="timeline-title">浙江晶立方 | 产品专家</h3>
+                        <div class="timeline-description">
+                            <p>向CEO汇报，领导包含3名产品经理的产品团队，与14名研发及设计人员协作，主导集团级信息化战略。</p>
+                            <div class="achievement-list">
+                                <div class="achievement-item">
+                                    <span class="achievement-icon">🔗</span>
+                                    <span>成功打通5大核心系统的数据孤岛，实现业务流程与数据的全面互通</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <span class="achievement-icon">📊</span>
+                                    <span>对超10个产品进行深度业务调研，构建统一的产品蓝图</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <span class="achievement-icon">🏗️</span>
+                                    <span>为集团数字化转型奠定坚实基础</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-period">2020.10 - 2023.03</div>
+                        <h3 class="timeline-title">挖财网络 | 产品专家</h3>
+                        <div class="timeline-description">
+                            <p>向CEO汇报，作为核心产品负责人，在内部创业项目中从0到1孵化一款面向企业主的资金管理SaaS工具。</p>
+                            <div class="achievement-list">
+                                <div class="achievement-item">
+                                    <span class="achievement-icon">💰</span>
+                                    <span>成功签约并交付5个中大型企业客户，平均客单价40万元</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <span class="achievement-icon">👥</span>
+                                    <span>主导产品架构、路径规划，带领17人综合团队</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <span class="achievement-icon">🚀</span>
+                                    <span>产品在2年内完成冷启动，实现商业闭环</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-period">2019.08 - 2020.09</div>
+                        <h3 class="timeline-title">亿企赢网络科技 | 资深产品经理</h3>
+                        <div class="timeline-description">
+                            <p>作为银行资金管理模块总负责人，带领9人团队进行产品重构。</p>
+                            <div class="achievement-list">
+                                <div class="achievement-item">
+                                    <span class="achievement-icon">📈</span>
+                                    <span>核心模块用户使用率从30%跃升至90%以上</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <span class="achievement-icon">🏦</span>
+                                    <span>对接超100家银行的银企直联API</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <span class="achievement-icon">⚡</span>
+                                    <span>主导设计自动化记账流程，深度优化用户体验</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">AI Agent 项目经验</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-header">
+                        <div class="project-icon">🧠</div>
+                        <h3 class="project-title">Synapse MCP</h3>
+                        <div class="project-subtitle">智能记忆与知识检索系统</div>
+                    </div>
+                    <div class="project-description">
+                        <p>设计三层搜索架构与主动上下文注入交互模式，解决AI编程中的上下文丢失痛点。</p>
+                    </div>
+                    <div class="project-impact">
+                        <div class="impact-metric">
+                            <span class="metric-number">90%</span>
+                            <span class="metric-label">Bug修复时间缩短</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">AI Search</span>
+                        <span class="tech-tag">Context Management</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/cnzhihao" class="project-link" target="_blank">
+                            <span>GitHub</span>
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-header">
+                        <div class="project-icon">⚙️</div>
+                        <h3 class="project-title">Software-planning-mcp</h3>
+                        <div class="project-subtitle">AI开发流程优化工具</div>
+                    </div>
+                    <div class="project-description">
+                        <p>设计交互式开发流程优化产品，通过智能任务拆解与结构化工作流管理，优化开发者的认知负载。</p>
+                    </div>
+                    <div class="project-impact">
+                        <div class="impact-metric">
+                            <span class="metric-number">50%</span>
+                            <span class="metric-label">开发周期缩短</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Workflow Design</span>
+                        <span class="tech-tag">Task Management</span>
+                        <span class="tech-tag">AI Planning</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/cnzhihao" class="project-link" target="_blank">
+                            <span>GitHub</span>
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-header">
+                        <div class="project-icon">🎨</div>
+                        <h3 class="project-title">MCP-Artisan</h3>
+                        <div class="project-subtitle">AI Agent卡片生成工作流</div>
+                    </div>
+                    <div class="project-description">
+                        <p>设计并开发安全沙盒工作区及智能提示词管理机制，为AI Agent提供安全、高效的文件与指令执行环境。</p>
+                    </div>
+                    <div class="project-impact">
+                        <div class="impact-metric">
+                            <span class="metric-number">安全</span>
+                            <span class="metric-label">沙盒执行环境</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Sandbox</span>
+                        <span class="tech-tag">Security</span>
+                        <span class="tech-tag">Prompt Engineering</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/cnzhihao" class="project-link" target="_blank">
+                            <span>GitHub</span>
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Community Impact -->
+            <div class="community-section">
+                <h3 class="subsection-title">社群影响力与专业活动</h3>
+                <div class="community-grid">
+                    <div class="community-card">
+                        <div class="community-icon">🚀</div>
+                        <h4>AI Coding产品教练</h4>
+                        <p>连续担任AI Coding产品教练，深度研究DeepSeek、ClaudeCode等前沿工具</p>
+                    </div>
+                    <div class="community-card">
+                        <div class="community-icon">👥</div>
+                        <h4>线上航海训练营</h4>
+                        <p>带领两期AI专题航海，线上覆盖超300人，学员好评率达90%以上</p>
+                    </div>
+                    <div class="community-card">
+                        <div class="community-icon">📚</div>
+                        <h4>线下专题课程</h4>
+                        <p>成功举办3期面向非技术人员的AI入门课程，累计服务学员约180人</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">技能矩阵</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">产品管理</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">市场分析</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">用户研究</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">产品架构</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">交互设计</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">项目管理</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">AI产品设计</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">AI Agent交互设计</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">工作流搭建</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">提示词工程</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">AI编程工具</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">开发者体验设计</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">技术栈</h3>
+                    <div class="tech-stack">
+                        <div class="tech-group">
+                            <h4>编程语言</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Next.js</span>
+                            </div>
+                        </div>
+                        <div class="tech-group">
+                            <h4>AI工具</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">n8n</span>
+                                <span class="tech-tag">Coze</span>
+                                <span class="tech-tag">Claude Code</span>
+                                <span class="tech-tag">DeepSeek</span>
+                            </div>
+                        </div>
+                        <div class="tech-group">
+                            <h4>设计工具</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">Axure</span>
+                                <span class="tech-tag">Miro</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="certifications">
+                <h3 class="subsection-title">学历与资质</h3>
+                <div class="cert-grid">
+                    <div class="cert-item">
+                        <div class="cert-icon">🎓</div>
+                        <div class="cert-content">
+                            <h4>江西财经大学</h4>
+                            <p>会计学 | 本科</p>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-icon">📜</div>
+                        <div class="cert-content">
+                            <h4>注册会计师</h4>
+                            <p>专业资质认证</p>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-icon">💻</div>
+                        <div class="cert-content">
+                            <h4>信息系统项目管理师</h4>
+                            <p>软考高级</p>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-icon">©️</div>
+                        <div class="cert-content">
+                            <h4>软件著作权</h4>
+                            <p>文档卡片生成软件【卡片生成器】</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="section-title">让我们一起重塑AI开发范式</h2>
+                    <p class="contact-description">
+                        如果您正在寻找一位对AI产品充满热情、具备深度技术理解和丰富产品管理经验的候选人，我很乐意与您交流。
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-text">
+                                <span class="contact-label">位置</span>
+                                <span class="contact-value">杭州</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-text">
+                                <span class="contact-label">邮箱</span>
+                                <span class="contact-value">zhcnzhihao@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">💻</div>
+                            <div class="contact-text">
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">github.com/cnzhihao</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="mailto:zhcnzhihao@gmail.com" class="social-link">
+                            <span>发送邮件</span>
+                        </a>
+                        <a href="https://github.com/cnzhihao" class="social-link" target="_blank">
+                            <span>访问GitHub</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>快速联系</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">公司</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">消息</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">
+                            <span>发送消息</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 徐智昊. 致力于通过AI技术创新重塑开发范式.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#hero">回到顶部</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
